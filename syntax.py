@@ -20,7 +20,7 @@ loop=5
 #print ('Hello %s' %name)
 
 #for loop range example
-print ('For loop and xrange example ; Print \"Hello World\" %d times' % loop)
+print ('For loop and range example ; Print \"Hello World\" %d times' % loop)
 for i in range(loop):
     print ('Hello World')
 
