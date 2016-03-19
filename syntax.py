@@ -1,4 +1,4 @@
-#Helloworld.py
+#syntax.py
 
 
 #function definition
