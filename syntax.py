@@ -6,6 +6,8 @@ def Whtnum (List1):
 #Learning if Else
     if List1[1] != 13:
         print ('Not 13')
+    elif List1[2]==14:
+        print('14')
     else :
         print('13')
 
