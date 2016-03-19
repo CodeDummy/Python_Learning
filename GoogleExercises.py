@@ -6,31 +6,19 @@
 # So donuts(5) returns 'Number of donuts: 5'
 # and donuts(23) returns 'Number of donuts: many'
 def donuts(count):
-  # +++your code here+++
   if (count<10):
      return ( 'Number of donuts: ' + str(count))
   else :
      return  ('Number of donuts: many')
   
 
-
-# Provided simple test() function used in main() to print
-# what each function returns vs. what it's supposed to return.
-def test(got, expected):
-  if got == expected:
-    prefix = (' OK ')
-  else:
-    prefix = ('  X ')
-  print ('%s got: %s expected: %s' % (prefix, repr(got), repr(expected)))
-
-
-  # B. both_ends
+# B. both_ends
 # Given a string s, return a string made of the first 2
 # and the last 2 chars of the original string,
 # so 'spring' yields 'spng'. However, if the string length
 # is less than 2, return instead the empty string.
-def both_ends(s):
 
+def both_ends(s):
     length=len(s)
     while (length>2):
         return (s[0:2]+s[length-2:length])
@@ -47,8 +35,8 @@ def both_ends(s):
 # Assume that the string is length 1 or more.
 # Hint: s.replace(stra, strb) returns a version of string s
 # where all instances of stra have been replaced by strb.
+
 def fix_start(s):
-   # +++your code here+++
    return s[0]+s[1:].replace(s[0],'*')
 
 
@@ -60,8 +48,18 @@ def fix_start(s):
 #   'dog', 'dinner' -> 'dig donner'
 # Assume a and b are length 2 or more.
 def mix_up(a, b):
-  # +++your code here+++
-  return b[0:2]+a[2:]+' '+a[0:2]+b[2:]
+    return b[0:2]+a[2:]+' '+a[0:2]+b[2:]
+
+# Provided simple test() function used in main() to print
+# what each function returns vs. what it's supposed to return.
+def test(got, expected):
+  if got == expected:
+    prefix = (' OK ')
+  else:
+    prefix = ('  X ')
+  print ('%s got: %s expected: %s' % (prefix, repr(got), repr(expected)))
+
+
 
 #Provided main() calls the above functions with interesting inputs,
 # using test() to check if each result is correct or not.
