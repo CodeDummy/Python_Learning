@@ -9,8 +9,9 @@ def Whtnum (List1):
 
 
 #for loop range example
-print('For loop and xrange example ; Print \"Hello World\" 5 times')
-for i in xrange(5):
+loop=5
+print 'For loop and xrange example ; Print \"Hello World\" %d times' % (loop,)
+for i in xrange(loop):
     print ('Hello World')
 
 List1= [12,13,14,15]
