@@ -13,8 +13,6 @@ def donuts(count):
      return  ('Number of donuts: many')
   
 
-#donuts(6)
-
 
 # Provided simple test() function used in main() to print
 # what each function returns vs. what it's supposed to return.
@@ -40,6 +38,30 @@ def both_ends(s):
         return ''
 
 
+# C. fix_start
+# Given a string s, return a string
+# where all occurences of its first char have
+# been changed to '*', except do not change
+# the first char itself.
+# e.g. 'babble' yields 'ba**le'
+# Assume that the string is length 1 or more.
+# Hint: s.replace(stra, strb) returns a version of string s
+# where all instances of stra have been replaced by strb.
+def fix_start(s):
+   # +++your code here+++
+   return s[0]+s[1:].replace(s[0],'*')
+
+
+# D. MixUp
+# Given strings a and b, return a single string with a and b separated
+# by a space '<a> <b>', except swap the first 2 chars of each string.
+# e.g.
+#   'mix', pod' -> 'pox mid'
+#   'dog', 'dinner' -> 'dig donner'
+# Assume a and b are length 2 or more.
+def mix_up(a, b):
+  # +++your code here+++
+  return b[0:2]+a[2:]+' '+a[0:2]+b[2:]
 
 #Provided main() calls the above functions with interesting inputs,
 # using test() to check if each result is correct or not.
@@ -57,7 +79,21 @@ def main():
   test(both_ends('Hello'), 'Helo')
   test(both_ends('a'), '')
   test(both_ends('xyz'), 'xyyz')
+  
+  print
+  print ('fix_start')
+  test(fix_start('babble'), 'ba**le')
+  test(fix_start('aardvark'), 'a*rdv*rk')
+  test(fix_start('google'), 'goo*le')
+  test(fix_start('donut'), 'donut')
 
+
+  print
+  print ('mix_up')
+  test(mix_up('mix', 'pod'), 'pox mid')
+  test(mix_up('dog', 'dinner'), 'dig donner')
+  test(mix_up('gnash', 'sport'), 'spash gnort')
+  test(mix_up('pezzy', 'firm'), 'fizzy perm')
 
 
 
