@@ -61,6 +61,33 @@ def test(got, expected):
 
 
 
+
+# Google's Python Class
+# http://code.google.com/edu/languages/google-python-class/
+
+# Additional basic string exercises
+
+# E. verbing
+# Given a string, if its length is at least 3,
+# add 'ing' to its end.
+# Unless it already ends in 'ing', in which case
+# add 'ly' instead.
+# If the string length is less than 3, leave it unchanged.
+# Return the resulting string.
+def verbing(s):
+  while (len(s)>3):
+      if (s[len(s)-3:] !='ing') :  
+          return s+'ing'
+      else :
+          return s+'ly'
+  else:
+      return s
+
+
+
+
+
+
 #Provided main() calls the above functions with interesting inputs,
 # using test() to check if each result is correct or not.
 def main():
@@ -92,6 +119,11 @@ def main():
   test(mix_up('dog', 'dinner'), 'dig donner')
   test(mix_up('gnash', 'sport'), 'spash gnort')
   test(mix_up('pezzy', 'firm'), 'fizzy perm')
+
+  print ('verbing')
+  test(verbing('hail'), 'hailing')
+  test(verbing('swiming'), 'swimingly')
+  test(verbing('do'), 'do')
 
 
 
