@@ -137,6 +137,20 @@ def front_back(a, b):
 
 
 
+#Lists1 Exercises
+# A. match_ends
+# Given a list of strings, return the count of the number of
+# strings where the string length is 2 or more and the first
+# and last chars of the string are the same.
+# Note: python does not have a ++ operator, but += works.
+def match_ends(words):
+    wordcnt=0
+    for word in words:
+        if (len(word)>1):
+            if(word[0]==word[-1]):
+                wordcnt+=1
+    return wordcnt            
+
 #Provided main() calls the above functions with interesting inputs,
 # using test() to check if each result is correct or not.
 def main():
@@ -186,6 +200,11 @@ def main():
   test(front_back('abcd', 'xy'), 'abxcdy')
   test(front_back('abcde', 'xyz'), 'abcxydez')
   test(front_back('Kitten', 'Donut'), 'KitDontenut')
+
+  print ('match_ends')
+  test(match_ends(['aba', 'xyz', 'aa', 'x', 'bbb']), 3)
+  test(match_ends(['', 'x', 'xy', 'xyx', 'xx']), 2)
+  test(match_ends(['aaa', 'be', 'abc', 'hello']), 1)
 
 
 
