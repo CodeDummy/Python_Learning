@@ -160,7 +160,8 @@ def match_ends(words):
 # Hint: this can be done by making 2 lists and sorting each of them
 # before combining them.
 def front_x(words):
-    
+    otherwords=[]
+    xwords=[]
     for word in words :
         if (word[0]=='x'):
             xwords.append(word)
