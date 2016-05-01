@@ -187,7 +187,22 @@ def sort_last(tuples):
   # +++your code here+++
   return sorted(tuples,key= last_element)
 
- 
+#Lists2 Exercises 
+# D. Given a list of numbers, return a list where
+# all adjacent == elements have been reduced to a single element,
+# so [1, 2, 2, 3] returns [1, 2, 3]. You may create a new list or
+# modify the passed in list.
+def remove_adjacent(nums):
+    new=[]
+    y=None
+    for x in nums :
+        if (x!=y):
+            new.append(x)
+            y=x
+
+            
+    return new
+            
 
    
 
@@ -263,6 +278,11 @@ def main():
        [(3, 1), (1, 2), (2, 3)])
   test(sort_last([(1, 7), (1, 3), (3, 4, 5), (2, 2)]),
        [(2, 2), (1, 3), (3, 4, 5), (1, 7)])
+
+  print ('remove_adjacent')
+  test(remove_adjacent([1, 2, 2, 3]), [1, 2, 3])
+  test(remove_adjacent([2, 2, 3, 3, 3]), [2, 3])
+  test(remove_adjacent([]), [])
 
 
 
