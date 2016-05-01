@@ -199,8 +199,6 @@ def remove_adjacent(nums):
         if (x!=y):
             new.append(x)
             y=x
-
-            
     return new
             
 
